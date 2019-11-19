@@ -39,7 +39,7 @@ First, you need to prepare and submit the design document (in PDF file) for the 
 
 1. What does the overall pipeline architecture look like? 
 
- * We provide you with the `snurisc3-design.pdf` file that has an (empty) diagram of pipeline stages and hardware components. You need to complete this diagram according to your pipeline design. A hand-drawn diagram is OK. You don't have to spend a lot of time to make it fancy.
+ * We provide you with the `snurisc3-design.pdf` file that has an (empty) diagram of pipeline stages and hardware components. You need to complete this diagram according to your pipeline design. A hand-drawn diagram is OK. You don't have to spend a lot of time to make it fancy. Please take a picture of your diagram and attach it in your design document.
 
 2. When do data hazards occur and how do you deal with them?
 
@@ -52,7 +52,7 @@ First, you need to prepare and submit the design document (in PDF file) for the 
 
 ### Implementation (60 points)
 
-You also need to implemente the working version of `snurisc3` simulator. We provide you with the skeleton code that can be downloaded from https://github.com/snu-csl/ca-pa4.
+You also need to implement the working version of `snurisc3` simulator. We provide you with the skeleton code that can be downloaded from https://github.com/snu-csl/ca-pa4.
 
 To download the skeleton code, please take the following step:
 
@@ -64,7 +64,7 @@ Note that the `snurisc3` simulator is based on the 5-stage pipelined simulator (
 
 Your task is to make it work correctly for any combination of instructions. You may find the [GUIDE.md](https://github.com/snu-csl/pyrisc/blob/master/pipe5/GUIDE.md) file in the PyRISC project useful, which describes the overall architecture and implementation details of the `snurisc5` simulator.
 
-In the PyRISC project, several RISC-V executable files are available such as `fib`, `sum100`, `forward`, `branch`, and `loaduse`. You can test your simulator with these programs. Also, it is highly recommended to write your own test programs to see how your simulator works in a particular situation.
+In the PyRISC project, several RISC-V executable files are available such as `fib`, `sum100`, `forward`, `branch`, and `loaduse`. You can test your simulator with these programs. Also, it is highly recommended to write your own test programs to see how your simulator works in a particular situation. Note that, for the given RISC-V executable file, `snurisc` (ISA simulator), `snurisc5` (5-stage implementation), and your `snurisc3` (3-stage implementation) all should have the same results in terms of register values and memory states. The only difference will be the number of cycles you need to execute the program.
 
 The following example shows how you can run the executable file `sum100` on the `snurisc3` simulator (We assume that `pyrisc` is also downloaded in the same directory as `ca-pa4`).
 
