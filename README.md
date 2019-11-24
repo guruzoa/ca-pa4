@@ -20,9 +20,9 @@ The `snurisc3` processor has the following characteristics:
 
 * The control logic is located in the FD stage.
 
-* The outcome of the conditional branch is determined at the end of the EX stage.
+* The "always-not-taken" branch prediction scheme is used. 
 
-* The "always-not-taken" branch prediction scheme is used.
+* The outcome of the conditional branch is determined at the end of the EX stage. If the prediction was wrong, the instruction in the branch target should be fetched immediately in the next cycle. The `jal` and `jalr` instructions are handled similarly. As soon as the branch target address is calculated in the EX stage, the instruction in the target address should be fetched immediately in the next cycle. In any case, those instructions fetched incorrectly should be turned into the BUBBLE.
 
 * The write to the register file is done at the end of the MW stage.
 
@@ -134,6 +134,8 @@ Control transfer: 2 instructions (28.57%)
 * You should not change any files other than `stages.py`. 
 
 * Your simulator should minimize the number of stalled cycles.
+
+* __The number of submissions to the `sys` server will be limited to 20 times__.
 
 ## Hand in instructions
 
