@@ -133,9 +133,14 @@ Control transfer: 2 instructions (28.57%)
 
 * You should not change any files other than `stages.py`. 
 
+* Your `stages.py` file should not contain any print() function even in comment lines. Please remove them before you submit your code to the server.
+
 * Your simulator should minimize the number of stalled cycles.
 
+* Your code should finish within a reasonable number of cycles. If your simulator runs beyond the predefined threshold, you will get the `TIMEOUT` error.
+
 * __The number of submissions to the `sys` server will be limited to 20 times__.
+
 
 ## Hand in instructions
 
